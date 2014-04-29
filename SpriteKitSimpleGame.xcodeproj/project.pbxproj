@@ -24,6 +24,10 @@
 		407867B7190AB783009B3D23 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40786792190AB783009B3D23 /* UIKit.framework */; };
 		407867BF190AB783009B3D23 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 407867BD190AB783009B3D23 /* InfoPlist.strings */; };
 		407867C1190AB783009B3D23 /* SpriteKitSimpleGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 407867C0190AB783009B3D23 /* SpriteKitSimpleGameTests.m */; };
+		407867CF190E9178009B3D23 /* background-music-aac.caf in Resources */ = {isa = PBXBuildFile; fileRef = 407867CC190E9178009B3D23 /* background-music-aac.caf */; };
+		407867D0190E9178009B3D23 /* pew-pew-lei.caf in Resources */ = {isa = PBXBuildFile; fileRef = 407867CD190E9178009B3D23 /* pew-pew-lei.caf */; };
+		407867D1190E9178009B3D23 /* sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 407867CE190E9178009B3D23 /* sprites.atlas */; };
+		407867D4190EAE62009B3D23 /* RWTGameOverScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 407867D3190EAE62009B3D23 /* RWTGameOverScene.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +64,11 @@
 		407867BC190AB783009B3D23 /* SpriteKitSimpleGameTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpriteKitSimpleGameTests-Info.plist"; sourceTree = "<group>"; };
 		407867BE190AB783009B3D23 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		407867C0190AB783009B3D23 /* SpriteKitSimpleGameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpriteKitSimpleGameTests.m; sourceTree = "<group>"; };
+		407867CC190E9178009B3D23 /* background-music-aac.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "background-music-aac.caf"; sourceTree = "<group>"; };
+		407867CD190E9178009B3D23 /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pew-pew-lei.caf"; sourceTree = "<group>"; };
+		407867CE190E9178009B3D23 /* sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = sprites.atlas; sourceTree = "<group>"; };
+		407867D2190EAE62009B3D23 /* RWTGameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWTGameOverScene.h; sourceTree = "<group>"; };
+		407867D3190EAE62009B3D23 /* RWTGameOverScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWTGameOverScene.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +130,7 @@
 		40786796190AB783009B3D23 /* SpriteKitSimpleGame */ = {
 			isa = PBXGroup;
 			children = (
+				407867CA190E9178009B3D23 /* SpriteKitSimpleGameResources */,
 				4078679F190AB783009B3D23 /* RWTAppDelegate.h */,
 				407867A0190AB783009B3D23 /* RWTAppDelegate.m */,
 				407867A2190AB783009B3D23 /* Main.storyboard */,
@@ -131,6 +141,8 @@
 				407867AB190AB783009B3D23 /* Spaceship.png */,
 				407867AD190AB783009B3D23 /* Images.xcassets */,
 				40786797190AB783009B3D23 /* Supporting Files */,
+				407867D2190EAE62009B3D23 /* RWTGameOverScene.h */,
+				407867D3190EAE62009B3D23 /* RWTGameOverScene.m */,
 			);
 			path = SpriteKitSimpleGame;
 			sourceTree = "<group>";
@@ -162,6 +174,24 @@
 				407867BD190AB783009B3D23 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		407867CA190E9178009B3D23 /* SpriteKitSimpleGameResources */ = {
+			isa = PBXGroup;
+			children = (
+				407867CB190E9178009B3D23 /* Sounds */,
+				407867CE190E9178009B3D23 /* sprites.atlas */,
+			);
+			path = SpriteKitSimpleGameResources;
+			sourceTree = SOURCE_ROOT;
+		};
+		407867CB190E9178009B3D23 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				407867CC190E9178009B3D23 /* background-music-aac.caf */,
+				407867CD190E9178009B3D23 /* pew-pew-lei.caf */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,10 +271,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				407867D1190E9178009B3D23 /* sprites.atlas in Resources */,
+				407867CF190E9178009B3D23 /* background-music-aac.caf in Resources */,
 				4078679B190AB783009B3D23 /* InfoPlist.strings in Resources */,
 				407867AE190AB783009B3D23 /* Images.xcassets in Resources */,
 				407867AC190AB783009B3D23 /* Spaceship.png in Resources */,
 				407867A4190AB783009B3D23 /* Main.storyboard in Resources */,
+				407867D0190E9178009B3D23 /* pew-pew-lei.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +299,7 @@
 				407867AA190AB783009B3D23 /* RWTMyScene.m in Sources */,
 				407867A7190AB783009B3D23 /* RWTViewController.m in Sources */,
 				407867A1190AB783009B3D23 /* RWTAppDelegate.m in Sources */,
+				407867D4190EAE62009B3D23 /* RWTGameOverScene.m in Sources */,
 				4078679D190AB783009B3D23 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,6 +507,7 @@
 				407867C6190AB783009B3D23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		407867C7190AB783009B3D23 /* Build configuration list for PBXNativeTarget "SpriteKitSimpleGameTests" */ = {
 			isa = XCConfigurationList;
@@ -481,6 +516,7 @@
 				407867C9190AB783009B3D23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

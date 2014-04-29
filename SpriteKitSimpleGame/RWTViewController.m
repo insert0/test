@@ -6,26 +6,55 @@
 //  Copyright (c) 2014 djkim. All rights reserved.
 //
 
+@import AVFoundation;
 #import "RWTViewController.h"
 #import "RWTMyScene.h"
 
+@interface RWTViewController()
+@property (nonatomic) AVAudioPlayer *backgroundMusicPlayer;
+@end
+
 @implementation RWTViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
+//- (void)viewDidLoad
+//{
+//    [super viewDidLoad];
+//
+//    // Configure the view.
+//    SKView * skView = (SKView *)self.view;
+//    skView.showsFPS = YES;
+//    skView.showsNodeCount = YES;
+//    
+//    // Create and configure the scene.
+//    SKScene * scene = [RWTMyScene sceneWithSize:skView.bounds.size];
+//    scene.scaleMode = SKSceneScaleModeAspectFill;
+//    
+//    // Present the scene.
+//    [skView presentScene:scene];
+//}
 
-    // Configure the view.
-    SKView * skView = (SKView *)self.view;
-    skView.showsFPS = YES;
-    skView.showsNodeCount = YES;
+- (void)viewWillLayoutSubviews
+{
+    [super viewWillLayoutSubviews];
+
+    // play background music
+//    NSError *error;
+//    NSURL *backgroundMusicURL = [[NSBundle mainBundle] URLForResource:@"background-music-aac" withExtension:@"caf"];
+//    self.backgroundMusicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:backgroundMusicURL error:&error];
+//    self.backgroundMusicPlayer.numberOfLoops = -1;
+//    [self.backgroundMusicPlayer prepareToPlay];
+//    [self.backgroundMusicPlayer play];
     
-    // Create and configure the scene.
-    SKScene * scene = [RWTMyScene sceneWithSize:skView.bounds.size];
-    scene.scaleMode = SKSceneScaleModeAspectFill;
-    
-    // Present the scene.
-    [skView presentScene:scene];
+    SKView *skView = (SKView *)self.view;
+    if (!skView.scene) {
+        skView.showsFPS = YES;
+        skView.showsNodeCount = YES;
+        
+        SKScene *scene = [RWTMyScene sceneWithSize:skView.bounds.size];
+        scene.scaleMode = SKSceneScaleModeAspectFill;
+        
+        [skView presentScene:scene];
+    }
 }
 
 - (BOOL)shouldAutorotate
